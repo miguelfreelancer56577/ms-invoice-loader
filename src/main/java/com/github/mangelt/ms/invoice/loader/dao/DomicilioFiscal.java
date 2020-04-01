@@ -21,6 +21,8 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -59,6 +61,7 @@ import lombok.Data;
 @Entity
 @Table(name = "domicilio_fiscal")
 @Data
+@Document("domicilios_fiscales")
 public class DomicilioFiscal extends RootEntity {
     @XmlValue
     @Column(name = "value")

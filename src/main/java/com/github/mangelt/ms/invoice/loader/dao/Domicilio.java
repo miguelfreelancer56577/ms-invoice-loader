@@ -20,6 +20,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -59,6 +61,7 @@ import lombok.Data;
 @Table
 @Entity(name = "domicilio")
 @Data
+@Document("domicilios")
 public class Domicilio extends RootEntity {
     @XmlValue
     @Column(name = "value")

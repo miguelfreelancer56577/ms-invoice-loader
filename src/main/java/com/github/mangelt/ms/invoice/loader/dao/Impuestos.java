@@ -29,6 +29,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -68,6 +70,7 @@ import lombok.ToString;
 @Table(name = "impuestos")
 @Data
 @ToString
+@Document("impuestos")
 public class Impuestos extends RootEntity {
 
 	@XmlTransient
