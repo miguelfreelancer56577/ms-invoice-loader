@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AccessLevel;
@@ -103,6 +105,7 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @Entity
 @Table(name = "impuestos_locales")
+@Document("impuestos_locales")
 public class ImpuestosLocales extends RootEntity {
 	
     @XmlElements({

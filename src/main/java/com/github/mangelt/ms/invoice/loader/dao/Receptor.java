@@ -27,6 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -62,6 +64,7 @@ import lombok.Data;
 @Entity
 @Table(name = "receptor")
 @Data
+@Document("receptores")
 public class Receptor extends RootEntity {
 
 	@XmlTransient
