@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -62,6 +64,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "timbre_fiscal_digital")
+@Document("timbre_fiscal_digital")
 public class TimbreFiscalDigital extends RootEntity {
 
     @XmlAttribute(name = "Version", required = true)

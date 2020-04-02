@@ -30,6 +30,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -94,6 +95,7 @@ import lombok.ToString;
 @Entity(name = "Comprobante")
 @Table(name = "comprobante")
 @Data
+@Document("comprobantes")
 public class Comprobante extends RootEntity{
 
     @XmlElement(name = "Emisor", required = true)

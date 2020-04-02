@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Builder;
@@ -57,6 +59,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "traslado")
+@Document("traslados")
 public class Traslado extends RootEntity {
 
 	@XmlTransient
