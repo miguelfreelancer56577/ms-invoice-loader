@@ -58,9 +58,9 @@ import lombok.Data;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "DomicilioFiscal",
-    "ExpedidoEn",
-    "RegimenFiscal"
+    "domicilioFiscal",
+    "expedidoEn",
+    "regimenFiscal"
 })
 @XmlRootElement(name = "Emisor")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -81,10 +81,8 @@ public class Emisor extends RootEntity {
     @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(columnDefinition = "id")
     protected ExpedidoEn expedidoEn;
-    @XmlElement(name = "RegimenFiscal", required = true)
-    @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
-    @JoinColumn(columnDefinition = "id")
-    protected RegimenFiscal regimenFiscal;
+    @XmlAttribute(name = "RegimenFiscal", required = true)
+    protected String regimenFiscal;
     @XmlAttribute(name = "Rfc")
     @Column(name = "rfc")
     protected String rfc;

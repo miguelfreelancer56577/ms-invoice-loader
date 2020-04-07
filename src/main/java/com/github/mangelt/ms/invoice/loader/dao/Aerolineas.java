@@ -53,7 +53,7 @@ import lombok.NoArgsConstructor;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "OtrosCargos"
+    "otrosCargos"
 })
 @XmlRootElement(name = "Aerolineas", namespace = "http://www.sat.gob.mx/aerolineas")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)

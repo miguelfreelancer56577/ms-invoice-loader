@@ -99,7 +99,7 @@ import lombok.Setter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "RetencionesLocalesOrTrasladosLocales"
+    "retencionesLocalesOrTrasladosLocales"
 })
 @XmlRootElement(name = "ImpuestosLocales", namespace = "http://www.sat.gob.mx/implocal")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -120,10 +120,12 @@ public class ImpuestosLocales extends RootEntity {
     
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "impuestosLocales")
     @Setter(value = AccessLevel.NONE)
+    @XmlTransient
     protected List<RetencionesLocales> retencionesLocales;
     
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "impuestosLocales")
     @Setter(value = AccessLevel.NONE)
+    @XmlTransient
     protected List<TrasladosLocales> trasladosLocales;
     
     @XmlAttribute(name = "Version", required = true)

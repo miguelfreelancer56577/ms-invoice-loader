@@ -46,7 +46,7 @@ import lombok.NoArgsConstructor;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "Retencion"
+    "retencion"
 })
 @XmlRootElement(name = "Retenciones")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)

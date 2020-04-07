@@ -26,13 +26,13 @@
 
 	<distributionManagement>
 		<repository>
-			<id>release</id>
-			<name>releases</name>
+			<id>central</id>
+			<name>libs-release-local</name>
 			<url>http://localhost:8081/artifactory/libs-release-local</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshot</id>
-			<name>snapshots</name>
+			<id>snapshots</id>
+			<name>libs-snapshot-local</name>
 			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
@@ -80,6 +80,11 @@
 	      <artifactId>spring-boot-starter-test</artifactId>
 	      <scope>test</scope>
 	    </dependency>
+	    <dependency>
+		    <groupId>org.eclipse.persistence</groupId>
+		    <artifactId>org.eclipse.persistence.moxy</artifactId>
+		    <version>2.5.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

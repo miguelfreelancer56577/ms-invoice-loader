@@ -70,8 +70,12 @@ public class Traslado extends RootEntity {
     protected String value;
     @XmlAttribute(name = "Importe")
     protected Float importe;
-    @XmlAttribute(name = "Tasa")
-    protected String tasa;
+    @XmlAttribute(name = "TasaOCuota")
+    protected String tasaOCuota;
+    @XmlAttribute(name = "TipoFactor")
+    protected String tipoFactor;
+    @XmlAttribute(name = "Base")
+    protected String base;
     @XmlAttribute(name = "Impuesto")
     protected String impuesto;
 

@@ -61,8 +61,8 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "Retenciones",
-    "Traslados"
+    "retenciones",
+    "traslados"
 })
 @XmlRootElement(name = "Impuestos")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -81,12 +81,14 @@ public class Impuestos extends RootEntity {
     @Transient
     protected Retenciones retenciones;
     @OneToMany(fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL, mappedBy = "impuestos")
+    @XmlTransient
     protected List<Retencion> retencionesList;
     
     @XmlElement(name = "Traslados", required = true)
     @Transient
     protected Traslados traslados;
     @OneToMany(fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL, mappedBy = "impuestos")
+    @XmlTransient
     protected List<Traslado> trasladosList;
     
     

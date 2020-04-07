@@ -16,6 +16,7 @@ import lombok.Data;
 
 @MappedSuperclass
 @Data
+@XmlTransient
 public class RootEntity {
 	@XmlTransient
     @Id

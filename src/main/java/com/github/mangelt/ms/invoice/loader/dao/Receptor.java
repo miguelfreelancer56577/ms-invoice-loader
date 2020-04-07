@@ -57,7 +57,7 @@ import lombok.Data;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "Domicilio"
+    "domicilio"
 })
 @XmlRootElement(name = "Receptor")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -80,5 +80,8 @@ public class Receptor extends RootEntity {
     @XmlAttribute(name = "Nombre")
     @Column(name = "nombre")
     protected String nombre;
+    @XmlAttribute(name = "UsoCFDI")
+    @Column(name = "usoCFDI")
+    protected String usoCFDI;
 
 }

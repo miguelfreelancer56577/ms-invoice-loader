@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -83,11 +84,11 @@ import lombok.ToString;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
  @XmlType(name = "", propOrder = {
-     "Emisor",
-     "Receptor",
-     "Conceptos",
-     "Impuestos",
-     "Complemento"
+     "emisor",
+     "receptor",
+     "concepto",
+     "impuestos",
+     "complemento"
  })
 @XmlRootElement(name = "Comprobante")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -110,6 +111,7 @@ public class Comprobante extends RootEntity{
     protected Conceptos concepto;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true, mappedBy = "comprobante")
     @Setter(value = AccessLevel.NONE)
+    @XmlTransient
     protected List<Concepto> conceptos;
     @XmlElement(name = "Impuestos", required = true)
     @OneToOne(cascade = CascadeType.ALL, optional = false, orphanRemoval = true, fetch = FetchType.LAZY)
@@ -157,6 +159,7 @@ public class Comprobante extends RootEntity{
     protected XMLGregorianCalendar fecha;
     @Column(name = "fecha")
     @Setter(value = AccessLevel.NONE)
+    @XmlTransient
     protected Calendar fechaItem;
     @XmlAttribute(name = "LugarExpedicion")
     @Column(name = "lugar_expedicion")
